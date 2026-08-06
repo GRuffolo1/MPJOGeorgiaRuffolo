@@ -1,6 +1,7 @@
 <article class="story">
   <header class="story-header">
     <h1>How warmer waters may be fueling stronger Florida hurricanes</h1>
+    <p class="byline">By Georgia Ruffolo</p>
   </header>
 
   <section class="story-section">
@@ -11,11 +12,11 @@
     <p>One place scientists increasingly look for answers is just offshore, in the water itself. Sea surface temperatures — the temperature of the top layers of the ocean — have been climbing for decades. In South Florida, a regional climate indicator based on NOAA’s long‑term sea surface temperature record shows that summertime ocean temperatures around the tip of the peninsula have warmed by about <a href="https://southeastfloridaclimatecompact.org/initiative/climate-indicators-sea-surface-temperature/" target="_blank" rel="noopener">0.49 °F per decade from 1982 to 2024</a>. That may sound pretty small, but over multiple decades, it adds up to a noticeably warmer foundation for any storm moving over the region.</p>
   </section>
 
-  <!-- VISUAL 1: Florida hurricane tracks / landfalls map or timeline -->
+  <!-- VISUAL 1: Florida hurricane landfalls since 1980 -->
   <section class="story-visual">
     <h2 class="visual-title">Florida hurricane landfalls since 1980</h2>
     <div id="visual-florida-landfalls" class="visual-container">
-      <!-- Your map/timeline visualization goes here (e.g., canvas, SVG, or chart library mount point) -->
+      <!-- Map or timeline visualization mount point -->
     </div>
     <p class="visual-caption">A map or timeline showing hurricanes that have made landfall in Florida since 1980, highlighting both frequency and category.</p>
   </section>
@@ -30,7 +31,7 @@
     <p>For Floridians, that matters far more than basic global averages. On the ground, higher‑category landfalls look like stronger winds, denser storm surges, and a bigger gap between what homes and infrastructure were designed to handle and what the storm actually delivers. Dr. Jennifer Collins, a professor at the University of South Florida’s School of Geosciences whose research focuses on extreme weather, said [fourth person contacted, response pending].</p>
   </section>
 
-  <!-- VISUAL 2: Bar/line chart of Florida hurricane counts and categories over time -->
+  <!-- VISUAL 2: Florida hurricane counts and intensity since 2000 -->
   <section class="story-visual">
     <h2 class="visual-title">Florida hurricane counts and intensity since 2000</h2>
     <div id="visual-florida-intensity-trend" class="visual-container">
@@ -72,7 +73,7 @@
   <section class="story-visual">
     <h2 class="visual-title">SST anomalies vs Florida hurricane intensity</h2>
     <div id="visual-sst-vs-intensity" class="visual-container">
-      <!-- Scatter plot with trend line: South Florida summertime SST anomalies vs a measure of Florida hurricane intensity (e.g., max category or average max sustained wind per year) -->
+      <!-- Scatter plot with trend line: South Florida summertime SST anomalies vs a measure of Florida hurricane intensity -->
     </div>
     <p class="visual-caption">A scatter plot showing how years with anomalously warm South Florida waters tend to coincide with stronger Florida hurricanes, illustrating correlation without implying strict causation.</p>
   </section>
