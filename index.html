@@ -204,7 +204,7 @@
         src="https://datawrapper.dwcdn.net/8BKqa/1/"
         scrolling="no"
         frameborder="0"
-        height="500">
+        height="700">
       </iframe>
 
       <figcaption>
@@ -256,7 +256,7 @@
         src="https://datawrapper.dwcdn.net/nYCfd/1/"
         scrolling="no"
         frameborder="0"
-        height="500">
+        height="700">
       </iframe>
 
       <figcaption>
@@ -337,7 +337,7 @@
         src="https://datawrapper.dwcdn.net/3wHI8/1/"
         scrolling="no"
         frameborder="0"
-        height="500">
+        height="700">
       </iframe>
 
       <figcaption>
@@ -379,3 +379,25 @@
 
           if (iframe && iframe.contentWindow === event.source) {
             iframe.style.height = event.data["datawrapper-height"][chartId] + "px";
+    <hr class="footer-rule">
+
+    <p class="footer-note">
+      Reporting and analysis by Georgia Ruffolo. Charts are embedded from Datawrapper.
+    </p>
+  </article>
+
+  <script>
+    window.addEventListener("message", function (event) {
+      if (!event.data || !event.data["datawrapper-height"]) return;
+
+      Object.keys(event.data["datawrapper-height"]).forEach(function (chartId) {
+        var iframe = document.getElementById("datawrapper-chart-" + chartId);
+
+        if (iframe && iframe.contentWindow === event.source) {
+          iframe.style.height = event.data["datawrapper-height"][chartId] + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
