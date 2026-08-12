@@ -129,6 +129,7 @@
 
     iframe {
       display: block;
+      max-width: 100%;
       background: var(--chart-background);
     }
 
@@ -173,6 +174,21 @@
       }
     }
   </style>
+
+  <script>
+    window.addEventListener("message", function (event) {
+      if (!event.data || !event.data["datawrapper-height"]) return;
+
+      Object.keys(event.data["datawrapper-height"]).forEach(function (chartId) {
+        var iframe = document.getElementById("datawrapper-chart-" + chartId);
+
+        if (iframe && iframe.contentWindow === event.source) {
+          iframe.style.height =
+            event.data["datawrapper-height"][chartId] + "px";
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -208,7 +224,7 @@
         title="Florida hurricane chart"
         aria-label="Data visualization: Florida hurricane trends"
         id="datawrapper-chart-8BKqa"
-        src="https://datawrapper.dwcdn.net/8BKqa/1/?transparent=false&dark=false"
+        src="https://datawrapper.dwcdn.net/8BKqa/1/?transparent=false&amp;dark=false"
         scrolling="no"
         frameborder="0"
         style="width: 0; min-width: 100% !important; border: none; background: #ffffff;"
@@ -261,7 +277,7 @@
         title="Florida hurricane chart"
         aria-label="Data visualization: Florida hurricane analysis"
         id="datawrapper-chart-nYCfd"
-        src="https://datawrapper.dwcdn.net/nYCfd/1/?transparent=false&dark=false"
+        src="https://datawrapper.dwcdn.net/nYCfd/1/?transparent=false&amp;dark=false"
         scrolling="no"
         frameborder="0"
         style="width: 0; min-width: 100% !important; border: none; background: #ffffff;"
@@ -343,7 +359,7 @@
         title="Florida hurricane chart"
         aria-label="Data visualization: warming waters and Florida hurricanes"
         id="datawrapper-chart-3wHI8"
-        src="https://datawrapper.dwcdn.net/3wHI8/1/?transparent=false&dark=false"
+        src="https://datawrapper.dwcdn.net/3wHI8/1/?transparent=false&amp;dark=false"
         scrolling="no"
         frameborder="0"
         style="width: 0; min-width: 100% !important; border: none; background: #ffffff;"
@@ -380,22 +396,5 @@
       Reporting and analysis by Georgia Ruffolo. Charts are embedded from Datawrapper.
     </p>
   </article>
-
-  <script>
-    window.addEventListener("message", function (event) {
-      if (!event.data || !event.data["datawrapper-height"]) return;
-
-      var iframes = document.querySelectorAll("iframe");
-
-      Object.keys(event.data["datawrapper-height"]).forEach(function (chartId) {
-        for (var i = 0; i < iframes.length; i++) {
-          if (iframes[i].contentWindow === event.source) {
-            iframes[i].style.height =
-              event.data["datawrapper-height"][chartId] + "px";
-          }
-        }
-      });
-    });
-  </script>
 </body>
 </html>
